@@ -1,6 +1,6 @@
 from setuptools import setup
 
-VERSION = '0.0.1'
+VERSION = '0.0.2'
 
 setup(
     name='raven-harakiri',
@@ -18,5 +18,5 @@ setup(
     install_requires=[
         'raven',
     ],
-    python_requires='>=3.5'
+    python_requires='>=2.7'
 )

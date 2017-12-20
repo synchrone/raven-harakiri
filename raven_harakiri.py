@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import json
 import logging
@@ -11,8 +11,8 @@ from raven.transport import HTTPTransport
 def store_json(option, opt_str, value, parser):
     try:
         value = json.loads(value)
-    except ValueError as e:
-        raise ValueError("Invalid JSON was used for option %s.  Received: %s" % (opt_str, value)) from e
+    except ValueError:
+        raise ValueError("Invalid JSON was used for option %s.  Received: %s" % (opt_str, value))
     setattr(parser.values, option.dest, value)
 
 
